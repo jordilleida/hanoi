@@ -15,8 +15,7 @@ namespace HanoiGame.Controllers
         {
             Models.Entities.Hanoi hanoi = new Models.Entities.Hanoi();
 
-            hanoi.start();
-
+            hanoi.start(); 
             ViewBag.Total = hanoi.total;
 
             return View();
