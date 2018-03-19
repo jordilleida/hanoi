@@ -1,0 +1,11 @@
+C:\Users\Super\Documents\Visual Studio 2017\Projects\HanoiGame\HanoiGame\bin\Debug\netcoreapp2.0\HanoiGame.deps.json
+C:\Users\Super\Documents\Visual Studio 2017\Projects\HanoiGame\HanoiGame\bin\Debug\netcoreapp2.0\HanoiGame.runtimeconfig.json
+C:\Users\Super\Documents\Visual Studio 2017\Projects\HanoiGame\HanoiGame\bin\Debug\netcoreapp2.0\HanoiGame.runtimeconfig.dev.json
+C:\Users\Super\Documents\Visual Studio 2017\Projects\HanoiGame\HanoiGame\bin\Debug\netcoreapp2.0\HanoiGame.dll
+C:\Users\Super\Documents\Visual Studio 2017\Projects\HanoiGame\HanoiGame\bin\Debug\netcoreapp2.0\HanoiGame.pdb
+C:\Users\Super\Documents\Visual Studio 2017\Projects\HanoiGame\HanoiGame\obj\Debug\netcoreapp2.0\HanoiGame.csprojResolveAssemblyReference.cache
+C:\Users\Super\Documents\Visual Studio 2017\Projects\HanoiGame\HanoiGame\obj\Debug\netcoreapp2.0\HanoiGame.csproj.CoreCompileInputs.cache
+C:\Users\Super\Documents\Visual Studio 2017\Projects\HanoiGame\HanoiGame\obj\Debug\netcoreapp2.0\HanoiGame.AssemblyInfoInputs.cache
+C:\Users\Super\Documents\Visual Studio 2017\Projects\HanoiGame\HanoiGame\obj\Debug\netcoreapp2.0\HanoiGame.AssemblyInfo.cs
+C:\Users\Super\Documents\Visual Studio 2017\Projects\HanoiGame\HanoiGame\obj\Debug\netcoreapp2.0\HanoiGame.dll
+C:\Users\Super\Documents\Visual Studio 2017\Projects\HanoiGame\HanoiGame\obj\Debug\netcoreapp2.0\HanoiGame.pdb
