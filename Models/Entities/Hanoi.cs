@@ -14,7 +14,7 @@ namespace HanoiGame.Models.Entities
 
         public int total = 0;
 
-        public Hanoi() { _1.Push(5); _1.Push(4); _1.Push(3); _1.Push(2); _1.Push(1); }
+        public Hanoi() {  _1.Push(4); _1.Push(3); _1.Push(2); _1.Push(1); }
 
         public void start() { take(1); }
 
@@ -25,7 +25,7 @@ namespace HanoiGame.Models.Entities
 
             if (even(number))
             {
-                if (actual - 1 == 0)
+                if (actual  == 1)
                 {
                     getPalo(actual + 2).Push(getPalo(actual).Pop());
                 }
@@ -36,7 +36,11 @@ namespace HanoiGame.Models.Entities
             }
             else
             {
-                if (actual + 1 == 4) { getPalo(actual - 2).Push(getPalo(actual).Pop()); } else { getPalo(actual + 1).Push(getPalo(actual).Pop()); }
+                if (actual  == 3) {
+                    getPalo(actual - 2).Push(getPalo(actual).Pop());
+                } else {
+                    getPalo(actual + 1).Push(getPalo(actual).Pop());
+                }
             }
 
         }
