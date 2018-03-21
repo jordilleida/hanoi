@@ -14,7 +14,13 @@ namespace HanoiGame.Models.Entities
 
         public int total = 0;
 
-        public Hanoi() { _1.Push(6); _1.Push(5); _1.Push(4); _1.Push(3); _1.Push(2); _1.Push(1); }
+        public Hanoi(int start)
+        {
+            for (int x = start; x >= 1; x--)
+            {
+                _1.Push(x);
+            }
+        }
 
         public void start() { take(1); }
 
@@ -25,7 +31,7 @@ namespace HanoiGame.Models.Entities
 
             if (even(number))
             {
-                if (actual  == 1)
+                if (actual == 1)
                 {
                     getPalo(actual + 2).Push(getPalo(actual).Pop());
                 }
@@ -36,9 +42,12 @@ namespace HanoiGame.Models.Entities
             }
             else
             {
-                if (actual  == 3) {
+                if (actual == 3)
+                {
                     getPalo(actual - 2).Push(getPalo(actual).Pop());
-                } else {
+                }
+                else
+                {
                     getPalo(actual + 1).Push(getPalo(actual).Pop());
                 }
             }
@@ -53,7 +62,7 @@ namespace HanoiGame.Models.Entities
             }
             else
             {
-                if (odd(movimiento)) put(1); 
+                if (odd(movimiento)) put(1);
                 else
                 {
                     if (odd(movimiento / 2))
@@ -62,7 +71,7 @@ namespace HanoiGame.Models.Entities
                     }
                     else
                     {
-                        put(highest());
+                        put(minimum());
                     }
                 }
 
@@ -72,12 +81,12 @@ namespace HanoiGame.Models.Entities
         }
 
 
-        public int highest()
+        public int minimum()
         {
             List<int> array = new List<int>();
-            array.Add( _1.Count == 0 ? 0 : (int)_1.Peek() );
-            array.Add( _2.Count == 0 ? 0 : (int)_2.Peek() );
-            array.Add( _3.Count == 0 ? 0 : (int)_3.Peek() );
+            array.Add(_1.Count == 0 ? 0 : (int)_1.Peek());
+            array.Add(_2.Count == 0 ? 0 : (int)_2.Peek());
+            array.Add(_3.Count == 0 ? 0 : (int)_3.Peek());
 
             return array.Where(x => x > 2).Min();
         }
