@@ -31,32 +31,24 @@ namespace HanoiGame.Models.Entities
 
             if (even(number))
             {
-                if (actual == 1)
-                {
-                    getPalo(actual + 2).Push(getPalo(actual).Pop());
-                }
-                else
-                {
-                    getPalo(actual - 1).Push(getPalo(actual).Pop());
-                }
+                if (actual == 1) actual = 4;
+                
+                getPalo(actual - 1).Push(getPalo(findPalo(number)).Pop());
+                
             }
             else
             {
-                if (actual == 3)
-                {
-                    getPalo(actual - 2).Push(getPalo(actual).Pop());
-                }
-                else
-                {
-                    getPalo(actual + 1).Push(getPalo(actual).Pop());
-                }
+                  if (actual == 3) actual = 0;
+              
+                    getPalo(actual + 1).Push(getPalo(findPalo(number) ).Pop());
+           
             }
 
         }
 
         public void take(int movimiento)
         {
-            if (_1.Count == 0 && (_2.Count == 0 || _3.Count == 0))
+            if (endGame())
             {
                 total = movimiento - 1;
             }
@@ -65,14 +57,9 @@ namespace HanoiGame.Models.Entities
                 if (odd(movimiento)) put(1);
                 else
                 {
-                    if (odd(movimiento / 2))
-                    {
-                        put(2);
-                    }
-                    else
-                    {
-                        put(minimum());
-                    }
+                    if (odd(movimiento / 2)) put(2);
+
+                    else put(minimum());
                 }
 
                 take(movimiento + 1);
@@ -80,7 +67,10 @@ namespace HanoiGame.Models.Entities
 
         }
 
-
+        private bool endGame()
+        {
+           return _1.Count == 0 && (_2.Count == 0 || _3.Count == 0);
+        }
         public int minimum()
         {
             List<int> array = new List<int>();

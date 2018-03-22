@@ -13,7 +13,7 @@ namespace HanoiGame.Controllers
     {
         public IActionResult Index()
         {
-            Models.Entities.Hanoi hanoi = new Models.Entities.Hanoi(8);
+            Models.Entities.Hanoi hanoi = new Models.Entities.Hanoi(12);
 
             hanoi.start(); 
             ViewBag.Total = hanoi.total;
